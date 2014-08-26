@@ -13,18 +13,36 @@
 
   <ul>
     <li class="one"> <a href="#"</>Pizza Hut</li>
-    <li id="2"> <a href="#"</>Taco Bell</li>
-    <li id="3"> <a href="#"</>Burger King</li>
-    <li id="4"> <a href="#"</>Wendys</li>
+    <li id="two"> <a href="#"</>Taco Bell</li>
+    <li id="three"> <a href="#"</>Burger King</li>
+    <li id="four"> <a href="#"</>Wendys</li>
   </ul>
 <h2> <em>select your meal</em></h2>
 
 
   <ul>
     <li class="onee"> Taco <input type="checkbox"></li>
-    <li> Burger <input type="checkbox"> </li>
+    <li> Pizza <input type="checkbox"> </li>
     <li> Pizza <input type="checkbox"></li>
-    <li> Taco Pizza <input type="checkbox"></li>
+    <li> Pizza <input type="checkbox"></li>
+  </ul>
+    <ul>
+    <li class="twoo"> Taco <input type="checkbox"></li>
+    <li> Taco <input type="checkbox"> </li>
+    <li> Taco <input type="checkbox"></li>
+    <li> Taco  <input type="checkbox"></li>
+  </ul>
+    <ul>
+    <li class="threee"> Taco <input type="checkbox"></li>
+    <li> BK <input type="checkbox"> </li>
+    <li> BK <input type="checkbox"></li>
+    <li> BK <input type="checkbox"></li>
+  </ul>
+    <ul>
+    <li class="fourr"> Taco <input type="checkbox"></li>
+    <li> Wendy <input type="checkbox"> </li>
+    <li> Wendy <input type="checkbox"></li>
+    <li> Wendy Pizza <input type="checkbox"></li>
   </ul>
 
 
@@ -51,5 +69,54 @@
     <button type="submit"> Get Notified </button>
   </div>
 </form>
+
+$(document).ready(function(){
+  $("#one").click(function(){
+    $("onee").hide();
+    $("twoo").hide();
+    $("three").hide();
+    $("fourr").hide();
+  });
+  $("#show").click(function(){
+    $("onee").show();
+  });
+});
+
+$(document).ready(function(){
+  $("#two").click(function(){
+    $("onee").hide();
+    $("twoo").hide();
+    $("three").hide();
+    $("fourr").hide();
+  });
+  $("#show").click(function(){
+    $("twoo").show();
+  });
+});
+
+$(document).ready(function(){
+  $("#three").click(function(){
+    $("onee").hide();
+    $("twoo").hide();
+    $("three").hide();
+    $("fourr").hide();
+  });
+  $("#show").click(function(){
+    $("threee").show();
+  });
+});
+
+$(document).ready(function(){
+  $("#four").click(function(){
+    $("onee").hide();
+    $("twoo").hide();
+    $("three").hide();
+    $("fourr").hide();
+  });
+  $("#show").click(function(){
+    $("fourr").show();
+  });
+});
+
 
 <script src="https://code.jquery.com/jquery-2.1.1.js">	</script>
