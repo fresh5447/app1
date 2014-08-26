@@ -7,6 +7,9 @@
 	<meta property="og:type" content="website" />
 </head>
 
+var foodChoices = [[pizza: "pepperon",pizza: "cheese", pizza: "anchobies", pizza: "meatlovers" ],[taco: "supreme",taco: "meat", taco: "bean", taco: "fish"],[ burger: "1/2 lb", burger: "1/4 lb", burger: "1 lb", burger: "2 lb"]];
+
+
 
 <h1> Restaraunts </h1>
 
@@ -52,3 +55,41 @@
     <button type="submit"> Get Notified </button>
   </div>
 </form>
+
+
+var restaraunt = {name: "Pizza Hut" food:["Cheese Pizza", "Perpperoni Pizza", "Meatlover's", "Vegan"]};
+
+var restaraunt = new.Object();
+restaraunt.name = "Burger King";
+restaraunt.food = ["cheeseburger", "double cheeseburger", "triple cheeseburger", "the heart attack"];
+
+var restaraunt = new.Object();
+restaraunt.name = "Outback Steakhouse;
+restaraunt.food = ["Big Steak", "Little Steak", "Cheese Steak", "Vegan Patty"];
+
+var restaraunt = new.Object();
+restaraunt.name = "Olive Garden;
+restaraunt.food = ["Pasta", "Salad", "Bread Sticks", "More Vegan Stuff"];
+
+var restaraunt = new.Object();
+restaraunt.name = "Red Lobster;
+restaraunt.food = ["Red Lobster", "Blue Lobster", "Rock Lobster", "Crab Cakes"];
+
+
+var i = 0;
+var text = "";
+
+while (restaraunt[i]) {
+    text += cars[i[0]] + "<br>";
+    i[0]++;
+}
+
+
+
+<h2> @restaraunts.each do |restaraunt| </h2>
+
+            <div> restaraunt.name, topic </div>
+
+            <div>restaraunt.food </div>
+
+    <% end %>
