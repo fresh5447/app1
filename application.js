@@ -14,36 +14,36 @@ var  r = [
         id: "one",
         name: "Pizza Hut",
         menu: [
-            {title: " Special pizza"},
-            {title: "Super Special pizza"},
-            {title: "Uber pizza"}
+            {title: " Special pizza", price: 123},
+            {title: "Super Special pizza", price: 74},
+            {title: "Uber pizza", price: 95}
         ]
     },
     {
         id: "two",
         name: "Taco Bell",
         menu: [
-            {title: " Super Taco"},
-            {title: "Extra Super Taco"},
-            {title: "Duper Taco"}
+            {title: " Super Taco", price: 44},
+            {title: "Extra Super Taco", price: 544},
+            {title: "Duper Taco", price: 162}
         ]
     },
     {
         id: "three",
         name: "BK",
         menu: [
-            {title: "Super Burger"},
-            {title: "Extra Burger"},
-            {title: "Duper Burger"}
+            {title: "Super Burger", price: 534},
+            {title: "Extra Burger", price: 454},
+            {title: "Duper Burger", price: 90}
         ]
     },
     {
         id: "four",
         name: "McDonalds",
         menu: [
-            {title: "This Burger"},
-            {title: "That Burger"},
-            {title: "Some Burger"}
+            {title: "This Burger", price: 64},
+            {title: "That Burger", price: 654},
+            {title: "Some Burger", price: 34}
         ]
     }
 ];
@@ -55,25 +55,49 @@ r.forEach(function(r,i){
         restaraunts += "<li id='" + r.id + "' class='restaurant'> <a href='#'>" + r.name + "</a></li>";
 
         r.menu.forEach(function(m, i){
-            menuItems += "<li class='item' data-source='" + r.id + "'> <input type='checkbox'/>"  +  m.title + "</li>";
 
+            menuItems += "<li class='item' data-source='" + r.id + "'> <input type='checkbox'/>"  +  m.title +"Price: $"+ m.price +  "</li>";
+            var menuItemPrice = m.price;
 
     })
  })
     $("ul#restarauntList").append(restaraunts);
     $("ul#menuList").append(menuItems);
 
-
-
-
-
-
-
-
-//will work on any h1 element
-$('body').on("click", 'h1' ,function(){
-    console.log(this);
+//This is the keystroke counter
+$("#notes").on("keypress", function(){
+    $('#notesCounter').text($(this).val().length);
+    $('#notes').css("background-color", this.value.length > 10 ? "#ff7777" : "fff")
 })
+
+
+
+total = 0;
+
+//Checkbox still not working
+//displays value of Nan
+//need to pass it price from menuItem
+
+    $(":checkbox").on("change", function() {
+        if (this.checked && !this.hidden){
+            total+=parseInt(this.value);
+            console.log(total);
+            $('.moneyValue').text(" Your total is $" + total);
+        } else {
+            console.log("unchecked");
+            total -= parseInt(this.value);
+            $(".moneyValue").text(" Your total is $" + total);
+        }
+}
+);
+
+
+
+
+//Example of using an event for an element that may not exist yet.
+//$('body').on("click", 'h1' ,function(){
+  //  console.log(this);
+//})
 
 
 
@@ -85,7 +109,4 @@ $('body').on("click", 'h1' ,function(){
 // .val = keyCount
 //change(key
 
-$("#notes").on("keypress", function(){
-    $('#notesCounter').text($(this).val().length);
-    $('#notes').css("background-color", this.value.length > 10 ? "#ff7777" : "fff")
-})
+
