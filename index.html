@@ -8,7 +8,8 @@
     <meta property="og:image" content="http://www.dairyqueen.com/us-en/Menu/Food/Original-Double-Cheeseburger/?localechange=1&" />
     <meta property="og:description" content="This app makes it so easy to order the food I love." />
     <meta property="og:type" content="website" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1"/>-->
+   <!-- <meta name="viewport" content="width=device-width;initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> -->
 </head>
 
     <link href="application.css" rel="stylesheet">
@@ -44,22 +45,21 @@
 </section>
 
 
-<!-- <div> var checkBoxCounter = function(checkbox){
-    counter = 0;
-    if(checkbox === true){
-    counter += 1;
-    }
-    console.log(counter);
-    } -->
+
+
+
 
 
 </div>
 
  <section>
 <form action "/process" method="POST">
-<div> <h5>Current Total: MONEY MONEY MONEY</h5>
+<div>
+    <div class="total">
+        <!-- Total should insert here -->
+     </div>
 
-    <label> Email </lable>
+    <label> Email </label>
          <input type="email" name="email"required placeholder="Email address">
  </div>
      <br/>
@@ -79,7 +79,7 @@
 </div>
 
 
-        <div class="moneyValue">Your Current Total: $$ </div>
+        <div class="total">Your Current Total: $$ </div>
 
 
 
@@ -111,3 +111,4 @@
 <script src="application.js"></script>
 
 </html>
+
