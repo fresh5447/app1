@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <header>
 
 <head>
@@ -6,8 +8,10 @@
     <meta property="og:image" content="http://www.dairyqueen.com/us-en/Menu/Food/Original-Double-Cheeseburger/?localechange=1&" />
     <meta property="og:description" content="This app makes it so easy to order the food I love." />
     <meta property="og:type" content="website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
+    <link href="application.css" rel="stylesheet">
 
     <h1><a href="#"> Restaurant Application </h1>
 
@@ -53,22 +57,35 @@
 
  <section>
 <form action "/process" method="POST">
-<div> <h5>Third Section</h5>
-     <label> Email </lable>
+<div> <h5>Current Total: MONEY MONEY MONEY</h5>
+
+    <label> Email </lable>
          <input type="email" name="email"required placeholder="Email address">
  </div>
      <br/>
 
+  <div>
+         <label>Phone</label>
+         <input type="text" pattern="[0-9]{10}" name="phone" required placeholder="Phone Number">
+  </div>
+
+     </br>
 
 
 <div>
-    <label>Phone</label>
-    <input type="text" pattern="[0-9]{10}" name="phone" required placeholder="Phone Number">
+    <label>Special Requests</label>
+    <input id="notes" type="text"  name="Testing The Counter" required placeholder="Less than 25 characters"
+    ><h5>Characters Remaining</h5>
 </div>
-     <div id="notes">
-        <input type="text">
-         <h6 class="counter"></h6>
-     </div>
+
+
+        <div class="moneyValue">Your Current Total: $$ </div>
+
+
+
+
+
+
 <div>
     <select name="type">
         <option value="teacher"> Please Select </option>
@@ -90,10 +107,7 @@
 
 
 
-
-
-
 <script src="https://code.jquery.com/jquery-2.1.1.js">	</script>
 <script src="application.js"></script>
 
-
+</html>
