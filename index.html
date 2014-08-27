@@ -1,89 +1,99 @@
+<header>
 
 <head>
-	<title>The best application to disover good places to eat, great restaraunts, food with high ratings, and easily place orders.</title>
-	<meta name="description" content="The Best Restaraunt App Out there" />
-	<meta property="og:image" content="http://www.dairyqueen.com/us-en/Menu/Food/Original-Double-Cheeseburger/?localechange=1&" />
-	<meta property="og:description" content="This app makes it so easy to order the food I love." />
-	<meta property="og:type" content="website" />
+    <title>The best application to disover good places to eat, great restaraunts, food with high ratings, and easily place orders.</title>
+    <meta name="description" content="The Best Restaraunt App Out there" />
+    <meta property="og:image" content="http://www.dairyqueen.com/us-en/Menu/Food/Original-Double-Cheeseburger/?localechange=1&" />
+    <meta property="og:description" content="This app makes it so easy to order the food I love." />
+    <meta property="og:type" content="website" />
 </head>
 
-<h1> Restaraunts </h1>
 
-<h2> <em>select a restaraunt</em></h2>
+    <h1><a href="#"> Restaurant Application </h1>
 
-  <ul id= "restaraunts">
-    <li class="one"> <a href="#"</>Pizza Hut</li>
-    <li class="two"> <a href="#"</>Taco Bell</li>
-    <li class="three"> <a href="#"</>Burger King</li>
-    <li class="four"> <a href="#"</>Wendys</li>
-  </ul>
+ </header>
+
+ <section>
+
+<h2> <em>select a restaurant</em></h2>
+
+<ul id="restarauntList">
+
+</ul>
+ </section>
+
+<section>
 <h2> <em>select your meal</em></h2>
 
-<div class="all_places">
-  <ul class="one">
-    <li> Pizza <input type="checkbox"></li>
-    <li> Pizza <input type="checkbox"> </li>
-    <li> Pizza <input type="checkbox"></li>
-    <li> Pizza <input type="checkbox"></li>
-  </ul>
-  <ul class="two">
-    <li class="two"> Taco <input type="checkbox"></li>
-    <li class="two"> Taco <input type="checkbox"> </li>
-    <li class="two"> Taco <input type="checkbox"></li>
-    <li class="two"> Taco  <input type="checkbox"></li>
-  </ul>
-    <ul class="three">
-    <li> BK <input type="checkbox"></li>
-    <li> BK <input type="checkbox"> </li>
-    <li> BK <input type="checkbox"></li>
-    <li> BK <input type="checkbox"></li>
-  </ul>
-  <ul class="four">
-    <li> Wendys <input type="checkbox"></li>
-    <li> Wendys <input type="checkbox"> </li>
-    <li> Wendys <input type="checkbox"></li>
-    <li> Wendys Pizza <input type="checkbox"></li>
-  </ul>
+        <style>
+            .item{
+                display: none;
+            }
+        </style>
+
+    <div>
+    <ul id="menuList">
+
+
+    </ul>
+    </div>
+</section>
+
+
+<!-- <div> var checkBoxCounter = function(checkbox){
+    counter = 0;
+    if(checkbox === true){
+    counter += 1;
+    }
+    console.log(counter);
+    } -->
+
+
 </div>
 
-
-<div> var checkBoxCounter = function(checkbox){
-	counter = 0;
-	if(checkbox === true){
-	counter += 1;
-	}
-	console.log(counter);
-}
-	
-	
-</div>
-
+ <section>
 <form action "/process" method="POST">
-  <div> 
+<div> <h5>Third Section</h5>
      <label> Email </lable>
-     <input type="email" name="email"required placeholder="Email address">
-   </div>
-  <br/>
-  
-  <div>
-  <label>Phone</label>
+         <input type="email" name="email"required placeholder="Email address">
+ </div>
+     <br/>
+
+
+
+<div>
+    <label>Phone</label>
     <input type="text" pattern="[0-9]{10}" name="phone" required placeholder="Phone Number">
-  </div>
-  <div>
+</div>
+     <div id="notes">
+        <input type="text">
+         <h6 class="counter"></h6>
+     </div>
+<div>
     <select name="type">
-      <option value="teacher"> Please Select </option>
-      <option value="teacher"> Farmer </option>
-      <option value="teacher"> Rancher </option>
-      <option value="teacher"> Teacher </option>
+        <option value="teacher"> Please Select </option>
+        <option value="teacher"> Farmer </option>
+        <option value="teacher"> Rancher </option>
+        <option value="teacher"> Teacher </option>
     </select>
-  </div>
-  <div>
+</div>
+<div>
     <button type="submit"> Get Notified </button>
-  </div>
+</div>
 </form>
+
+</section>
+
+<footer>
+    <h2> Bottom section of footer</h2>
+</footer>
+
 
 
 
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js">	</script>
+<script src="application.js"></script>
+
+
