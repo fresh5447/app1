@@ -193,16 +193,27 @@ $(function(){
     );
 
 
-
     $.ajax({
         type: "GET",
         url: "https://github.com/codective.json",
         dataType: "jsonp",
         success: function(data) {
-            console.log(data);
-            restaurants += "<li><a href "">/a?=></li>"
+            var events = "";
+            data.forEach(function(eventLine, i) {
+                console.log(eventLine);
+                events += "<li><a href='" + eventLine.url + "'>" + eventLine.type + "</a></li>";
+            })
+            $("#github").append(events);
         }
     });
+
+
+
+
+
+
+
+});
 
 
 
