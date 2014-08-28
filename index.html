@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
 
-<head>
-    <title>The best application to disover good places to eat, great restaraunts, food with high ratings, and easily place orders.</title>
-    <meta name="description" content="The Best Restaraunt App Out there" />
-    <meta property="og:image" content="http://www.dairyqueen.com/us-en/Menu/Food/Original-Double-Cheeseburger/?localechange=1&" />
-    <meta property="og:description" content="This app makes it so easy to order the food I love." />
-    <meta property="og:type" content="website" />
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1"/>-->
-   <!-- <meta name="viewport" content="width=device-width;initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> -->
-</head>
+    <head>
+        <title>The best application to disover good places to eat, great restaraunts, food with high ratings, and easily place orders.</title>
+        <meta name="description" content="The Best Restaraunt App Out there" />
+        <meta property="og:image" content="http://www.dairyqueen.com/us-en/Menu/Food/Original-Double-Cheeseburger/?localechange=1&" />
+        <meta property="og:description" content="This app makes it so easy to order the food I love." />
+        <meta property="og:type" content="website" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="application.css" rel="stylesheet">
 
-    <link href="application.css" rel="stylesheet">
 
-    <h1><a href="#"> Restaurant Application </h1>
+    </head>
 
- </header>
 
- <section>
-
-<h2> <em>select a restaurant</em></h2>
-
-<ul id="restarauntList">
-
-</ul>
- </section>
+<body>
+<h1> Restaurant Application </h1>
 
 <section>
-<h2> <em>select your meal</em></h2>
 
-        <style>
-            .item{
-                display: none;
-            }
-        </style>
+    <h2> <em>select a restaurant</em></h2>
 
-    <div>
-    <ul id="menuList">
-
+    <ul id="restarauntList">
 
     </ul>
+</section>
+
+<section>
+    <h2> <em>select your meal</em></h2>
+
+   <!-- <style>
+    .item{
+        display: none;
+    }
+    </style> -->
+
+    <div>
+        <ul id="menuList">
+
+
+        </ul>
     </div>
 </section>
 
@@ -49,66 +49,67 @@
 
 
 
+<section>
+    <form action = "/process" method="POST" >
+    <div>
+        <div class="total">
+            <!-- Total should insert here -->
+        </div>
 
-</div>
+        <label> Email </label>
+        <input type="email" name="email"required placeholder="Email address">
+    </div>
+    <br/>
 
- <section>
-<form action "/process" method="POST">
-<div>
-    <div class="total">
-        <!-- Total should insert here -->
-     </div>
+    <div>
+        <label>Phone</label>
+        <input type="text" pattern="[0-9]{10}" name="phone" required placeholder="Phone Number">
+    </div>
 
-    <label> Email </label>
-         <input type="email" name="email"required placeholder="Email address">
- </div>
-     <br/>
-
-  <div>
-         <label>Phone</label>
-         <input type="text" pattern="[0-9]{10}" name="phone" required placeholder="Phone Number">
-  </div>
-
-     </br>
+    </br>
 
 
-<div>
-    <label>Special Requests</label>
-    <input id="notes" type="text"  name="Testing The Counter" required placeholder="Less than 25 characters"
-    ><h5>Characters Remaining</h5>
-</div>
+    <div>
+        <label >Special Requests</label>
+        <input type="text" id="notes" name="Testing The Counter" required placeholder="Less than 25 characters"
+           >
+        <h5 id="notesCounter">Characters Remaining</h5>
+    </div>
 
 
-        <div class="total">Your Current Total: $$ </div>
+    <!--<div class="total">Your Current Total: $$ </div>-->
 
 
 
 
 
 
-<div>
-    <select name="type">
-        <option value="teacher"> Please Select </option>
-        <option value="teacher"> Farmer </option>
-        <option value="teacher"> Rancher </option>
-        <option value="teacher"> Teacher </option>
-    </select>
-</div>
-<div>
-    <button type="submit"> Get Notified </button>
-</div>
-</form>
+    <div>
+        <select name="type">
+            <option value="teacher"> Please Select </option>
+            <option value="teacher"> Farmer </option>
+            <option value="teacher"> Rancher </option>
+            <option value="teacher"> Teacher </option>
+        </select>
+    </div>
+    <div>
+        <button type="submit"> Get Notified </button>
+    </div>
+    </form>
 
 </section>
+<div id="github">
 
+
+</div>
 <footer>
     <h2> Bottom section of footer</h2>
 </footer>
 
 
 
-<script src="https://code.jquery.com/jquery-2.1.1.js">	</script>
+<script src="http://code.jquery.com/jquery-1.11.1.js">	</script>
 <script src="application.js"></script>
+</body>
 
 </html>
-
