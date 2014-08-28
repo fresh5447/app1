@@ -1,3 +1,83 @@
+
+
+//show menu items on click of restaurant
+$(function(){
+     console.log("Document Ready");
+    $('.restaurant').on("click", function(){
+        //ev.preventDefault();
+        //var items = $(".items");
+        //items.filter("[data-source=" + this.id + "]").show();
+        //items.filter("[data-source!=" + this.id + "]").hide();
+          $('.item').hide().filter("[data-source=" + this.id + "]").show();
+
+    });
+
+
+
+
+
+
+
+
+
+
+//Create restaurants and menu items dynamically
+
+
+    var restaraunts = "", menuItems="";
+
+    r.forEach(function(r,i){
+        restaraunts += "<li id='" + r.id + "' class='restaurant'> <a href=''>" + r.name + "</a></li>";
+
+        r.menu.forEach(function(m, i){
+
+            menuItems += "<li class='item' data-source='" + r.id + "'> <input type='checkbox' value='" + m.price + "'/>"  +  m.title +"Price: $"+ m.price +  "</li>";
+
+
+
+        });
+    });
+    $("ul#restarauntList").append(restaraunts);
+    $("ul#menuList").append(menuItems);
+
+    console.log(menuItems);
+
+
+//This is the keystroke counter
+    $("#notes").on("keyup", function(){
+        $('#notesCounter').text($(this).val().length);
+        $('#notes').css("background-color", this.value.length > 10 ? "#ff7777" : "fff")
+    });
+
+
+
+
+    var total = 0;
+    $(".total").text("Your total is " + total + "!!");
+
+
+
+
+
+
+    $(":checkbox").on("change", function() {
+            if (this.checked && !this.hidden){
+                total+=parseInt(this.value);
+                console.log(total);
+                $('.total').text(" Your total is $" + total);
+            } else {
+                console.log("unchecked");
+                total -= parseInt(this.value);
+                $(".total").text(" Your total is $" + total);
+            }
+        }
+    );
+
+
+
+});
+
+
 //dynamically create JSON object
 var  r = [
     {
@@ -41,13 +121,13 @@ var  r = [
 
 //show menu items on click of restaurant
 $(function(){
-     console.log("Document Ready");
+    console.log("Document Ready");
     $('.restaurant').on("click",function(){
         //ev.preventDefault();
-       // var items = $(".items");
-       // items.filter("[data-source=" + this.id + "]").show();
-       // items.filter("[data-source!=" + this.id + "]").hide();
-        $(".item").hide().filter("[data-source=" + this.id + "]").show();
+        // var items = $(".items");
+        // items.filter("[data-source=" + this.id + "]").show();
+        // items.filter("[data-source!=" + this.id + "]").hide();
+        $('.item').hide().filter("[data-source=" + this.id + "]").show();
 
     });
 
@@ -66,7 +146,7 @@ $(function(){
     var restaraunts = "", menuItems="";
 
     r.forEach(function(r,i){
-        restaraunts += "<li id='" + r.id + "' class='restaurant'> <a href='#'>" + r.name + "</a></li>";
+        restaraunts += "<li id='" + r.id + "' class='restaurant'> <a href=''>" + r.name + "</a></li>";
 
         r.menu.forEach(function(m, i){
 
@@ -79,7 +159,7 @@ $(function(){
     $("ul#restarauntList").append(restaraunts);
     $("ul#menuList").append(menuItems);
 
-
+    console.log(menuItems);
 
 
 //This is the keystroke counter
@@ -92,9 +172,6 @@ $(function(){
 
 
     var total = 0;
-//Checkbox still not working
-//displays value of Nan
-//need to pass it price from menuItem
     $(".total").text("Your total is " + total + "!!");
 
 
@@ -117,36 +194,16 @@ $(function(){
 
 
 
+    $.ajax({
+        type: "GET",
+        url: "https://github.com/codective.json",
+        dataType: "jsonp",
+        success: function(data) {
+            console.log(data);
+            restaurants += "<li><a href "">/a?=></li>"
+        }
+    });
 
-
-
-
-
-
-//Example of using an event for an element that may not exist yet.
-//$('body').on("click", 'h1' ,function(){
-    //  console.log(this);
-//})
-
-
-
-
-
-
-//while i am counting count how many variables i have entered.
-//to access the text that you typed you need .value, change event, and length
-// .val = keyCount
-//change(key
-
-
-
-
-
-
-
-
-
-});
 
 
 
