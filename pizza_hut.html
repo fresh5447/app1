@@ -1,0 +1,53 @@
+<head>
+	<title>The best application to disover good places to eat, great restaraunts, food with high ratings, and easily place orders.</title>
+	<meta name="description" content="The Best Restaraunt App Out there" />
+	<meta property="og:image" content="http://www.dairyqueen.com/us-en/Menu/Food/Original-Double-Cheeseburger/?localechange=1&" />
+	<meta property="og:description" content="This app makes it so easy to order the food I love." />
+	<meta property="og:type" content="website" />
+</head>
+
+
+<h1> Restaraunts </h1>
+
+<h2> <em>select a restaraunt</em></h2>
+
+  <ul>
+    <li> <a href="Pizza Hut"</>Pizza Hut</li>
+    <li> <a href="Taco Bell"</>Taco Bell</li>
+    <li> <a href="Burger King"</>Burger King</li>
+    <li> <a href="Wendys"</>Wendys</li>
+  </ul>
+<h2> <em>Pick menu items from Pizza Hut</em></h2>
+
+
+  <ul>
+    <li> Taco <input type="checkbox"></li>
+    <li> Burger <input type="checkbox"> </li>
+    <li> Pizza <input type="checkbox"></li>
+    <li> Taco Pizza <input type="checkbox"></li>
+  </ul>
+
+
+<form action "/process" method="POST">
+  <div> 
+     <label> Email </lable>
+     <input type="email" name="email"required placeholder="Email address">
+   </div>
+  <br/>
+  
+  <div>
+  <label>Phone</label>
+    <input type="text" pattern="[0-9]{10}" name="phone" required placeholder="Phone Number">
+  </div>
+  <div>
+    <select name="type">
+      <option value="teacher"> Please Select </option>
+      <option value="teacher"> Farmer </option>
+      <option value="teacher"> Rancher </option>
+      <option value="teacher"> Teacher </option>
+    </select>
+  </div>
+  <div>
+    <button type="submit"> Get Notified </button>
+  </div>
+</form>

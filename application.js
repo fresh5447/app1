@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 Parse.initialize("Meyn2nCyKeahZsMt0ujlfG8gsv7iMhGIeNuWLsRR", "WHOdw7C4jGQM9skogwpPJXVyexHcSHlCUZBjKuMA");
+=======
+
+
+>>>>>>> 8f4c6f9bc4ec5f93994543c6c54093dbdc5a5ce8
 //show menu items on click of restaurant
 $(function(){
      console.log("Document Ready");
@@ -142,9 +147,31 @@ $(function(){
 //Create restaurants and menu items dynamically
 
 
+<<<<<<< HEAD
 
 
 
+=======
+    var restaraunts = "", menuItems="";
+
+    r.forEach(function(r,i){
+        restaraunts += "<li id='" + r.id + "' class='restaurant'> <a href=''>" + r.name + "</a></li>";
+
+        r.menu.forEach(function(m, i){
+
+            menuItems += "<li class='item' data-source='" + r.id + "'> <input type='checkbox' value='" + m.price + "'/>"  +  m.title +"Price: $"+ m.price +  "</li>";
+
+
+
+        });
+    });
+    $("ul#restarauntList").append(restaraunts);
+    $("ul#menuList").append(menuItems);
+
+    console.log(menuItems);
+
+
+>>>>>>> 8f4c6f9bc4ec5f93994543c6c54093dbdc5a5ce8
 //This is the keystroke counter
     $("#notes").on("keyup", function(){
         $('#notesCounter').text($(this).val().length);
@@ -191,37 +218,16 @@ $(function(){
     });
 
 
-    var MenuItem = Parse.Object.extend("MenuItems");
-    var query = new Parse.Query(MenuItem);
-    query.find({
-        success: function(results) {
-            console.log(results);
-        },
-        error: function(error) {
-            alert("Error: " + error.code + " " + error.message);
-        }
-    });
-
-        var restaraunts = "", menuItems="";
-
-        results.forEach(function(r,i){
-            restaraunts += "<li id='" + r.id + "' class='restaurant'> <a href=''>" + r.attributes.name + "</a></li>";
-
-         //   r.menu.forEach(function(m, i){
-
-           //     menuItems += "<li class='item' data-source='" + r.id + "'> <input type='checkbox' value='" + m.price + "'/>"  +  m.title +"Price: $"+ m.price +  "</li>";
-
-
-
-            //});
-        });
-        $("ul#restarauntList").append(restaraunts);
-        $("ul#menuList").append(menuItems);
-        $("div#github").append(menuItems);
-
 
 
 
 
 });
+
+
+});
+
+
+
+
 
